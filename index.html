@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Social Sharing -->
+    <title>Trucecode | End the War on Complex Code</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="description" content="Trucecode is a modern IT agency specializing in high-performance Web, Mobile (React Native), and ERPNext solutions.">
+    <meta property="og:title" content="Trucecode | Web & ERP Solutions">
+    <meta property="og:description" content="End the war on complex code. High-performance apps and ERPNext solutions.">
+    <meta property="og:image" content="https://ui-avatars.com/api/?name=Truce+Code&background=4f46e5&color=fff&size=512"> 
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+                    colors: { slate: { 950: '#020617' } }
+                }
+            }
+        }
+    </script>
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Custom Polish */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #020617; }
+        ::-webkit-scrollbar-thumb { background: #3730a3; border-radius: 4px; }
+        
+        /* Utility for scroll animations */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .delay-100 { transition-delay: 0.1s; }
+        .delay-200 { transition-delay: 0.2s; }
+        .delay-300 { transition-delay: 0.3s; }
+        
+        /* Mobile Menu Transitions */
+        #mobile-menu { transition: transform 0.3s ease-in-out; }
+        #mobile-menu.open { transform: translateX(0); }
+        #mobile-menu.closed { transform: translateX(100%); }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 selection:bg-indigo-500 selection:text-white overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 border-b border-transparent backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2 z-50">
+                <i data-lucide="terminal" class="w-8 h-8 text-indigo-500"></i>
+                <span class="text-xl font-bold tracking-tight text-white">
+                    TRUCE<span class="text-indigo-500">CODE</span>
+                </span>
+            </div>
+            
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#services" class="text-sm font-medium hover:text-white transition-colors">Services</a>
+                <a href="#why-us" class="text-sm font-medium hover:text-white transition-colors">Why Us</a>
+                <a href="#contact" class="px-6 py-2 rounded-full border border-indigo-500/30 text-sm font-medium hover:bg-indigo-500/10 transition-colors text-white">
+                    Start a Project
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden z-50 text-white p-2">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="closed fixed inset-0 z-40 bg-slate-950/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8">
+        <a href="#services" class="text-2xl font-bold text-white mobile-link">Services</a>
+        <a href="#why-us" class="text-2xl font-bold text-white mobile-link">Why Us</a>
+        <a href="#contact" class="text-2xl font-bold text-indigo-400 mobile-link">Start Project</a>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-indigo-600/20 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+        
+        <div class="max-w-4xl mx-auto text-center space-y-8">
+            <div class="reveal inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-900/30 border border-indigo-500/30 text-indigo-300 text-xs font-semibold tracking-wide uppercase">
+                <span class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
+                Accepting New Clients for 2025
+            </div>
+            
+            <h1 class="reveal delay-100 text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-tight">
+                End the war on <br />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">
+                    complex code.
+                </span>
+            </h1>
+            
+            <p class="reveal delay-200 text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                We build high-performance web, mobile, and ERP solutions that just work. 
+                No bloat, no jargon—just clean, effective software.
+            </p>
+
+            <div class="reveal delay-200 flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                <a href="#contact" class="group w-full sm:w-auto px-8 py-4 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg font-semibold transition-all hover:scale-105 shadow-lg shadow-indigo-500/25 flex items-center justify-center gap-2">
+                    Discuss Your Idea <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                </a>
+                <a href="#services" class="w-full sm:w-auto px-8 py-4 bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white rounded-lg font-semibold transition-all">
+                    View Capabilities
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 px-6 bg-slate-950 relative border-t border-slate-900">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Our Expertise</h2>
+                <div class="h-1 w-20 bg-indigo-500 rounded-full mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Web Dev -->
+                <div class="reveal delay-100 group relative p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-900/20">
+                    <div class="w-14 h-14 bg-slate-800 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 transition-colors duration-300">
+                        <i data-lucide="globe" class="w-7 h-7 text-indigo-400 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Web Development</h3>
+                    <p class="text-slate-400 mb-6 text-sm leading-relaxed">
+                        High-speed dashboards and SEO-optimized sites. We craft responsive platforms that drive real growth.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-sm text-slate-300"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i> SaaS Platforms</li>
+                        <li class="flex items-center gap-3 text-sm text-slate-300"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i> React & Tailwind</li>
+                    </ul>
+                </div>
+
+                <!-- App Dev -->
+                <div class="reveal delay-200 group relative p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-900/20">
+                    <div class="w-14 h-14 bg-slate-800 rounded-xl flex items-center justify-center mb-6 group-hover:bg-cyan-600 transition-colors duration-300">
+                        <i data-lucide="smartphone" class="w-7 h-7 text-cyan-400 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">App Development</h3>
+                    <p class="text-slate-400 mb-6 text-sm leading-relaxed">
+                        Native-feeling mobile experiences. We build intuitive, high-performance apps for iOS and Android.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-sm text-slate-300"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i> React Native Experts</li>
+                        <li class="flex items-center gap-3 text-sm text-slate-300"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i> iOS & Android</li>
+                    </ul>
+                </div>
+
+                <!-- ERP Dev -->
+                <div class="reveal delay-300 group relative p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-orange-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-900/20">
+                    <div class="w-14 h-14 bg-slate-800 rounded-xl flex items-center justify-center mb-6 group-hover:bg-orange-600 transition-colors duration-300">
+                        <i data-lucide="layers" class="w-7 h-7 text-orange-400 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">ERP Solutions</h3>
+                    <p class="text-slate-400 mb-6 text-sm leading-relaxed">
+                        Streamline your entire business with **ERPNext**. We build custom modules tailored to your workflow.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-sm text-slate-300"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i> Frappe Framework</li>
+                        <li class="flex items-center gap-3 text-sm text-slate-300"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i> Workflow Automation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Work & Products Section -->
+        <section id="work" class="py-24 px-6 bg-slate-950 border-t border-slate-900">
+            <div class="max-w-7xl mx-auto space-y-24">
+                
+                <!-- 1. Client Projects (Dummy Data) -->
+                <div>
+                    <div class="mb-12 reveal">
+                        <div class="flex items-center gap-4 mb-6">
+                            <h2 class="text-3xl md:text-4xl font-bold text-white">Selected Projects</h2>
+                            <span class="px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-xs font-medium text-slate-400">
+                                Work in Progress
+                            </span>
+                        </div>
+                        <div class="h-1 w-20 bg-indigo-500 rounded-full"></div>
+                    </div>
+    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Dummy Project 1 -->
+                        <div class="reveal delay-100 group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/50 hover:border-indigo-500/50 transition-all duration-300">
+                            <!-- Abstract "Image" Placeholder -->
+                            <div class="h-64 bg-slate-900 relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-transparent"></div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <i data-lucide="layout-dashboard" class="w-16 h-16 text-slate-800 group-hover:text-indigo-500/50 transition-colors"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="p-8 relative">
+                                <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-12 h-12 bg-slate-950 rounded-full flex items-center justify-center border border-slate-800 group-hover:border-indigo-500 transition-colors">
+                                    <i data-lucide="arrow-up-right" class="w-5 h-5 text-slate-400 group-hover:text-indigo-400"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">Fintech Analytics Dashboard</h3>
+                                <p class="text-slate-400 text-sm mb-6">A high-performance React dashboard for tracking real-time crypto assets and forex markets.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 rounded-full bg-slate-950 border border-slate-800 text-xs text-slate-300">React</span>
+                                    <span class="px-3 py-1 rounded-full bg-slate-950 border border-slate-800 text-xs text-slate-300">Tailwind</span>
+                                    <span class="px-3 py-1 rounded-full bg-slate-950 border border-slate-800 text-xs text-slate-300">D3.js</span>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Dummy Project 2 -->
+                        <div class="reveal delay-200 group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/50 hover:border-cyan-500/50 transition-all duration-300">
+                            <div class="h-64 bg-slate-900 relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent"></div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <i data-lucide="shopping-cart" class="w-16 h-16 text-slate-800 group-hover:text-cyan-500/50 transition-colors"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="p-8 relative">
+                                <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-12 h-12 bg-slate-950 rounded-full flex items-center justify-center border border-slate-800 group-hover:border-cyan-500 transition-colors">
+                                    <i data-lucide="arrow-up-right" class="w-5 h-5 text-slate-400 group-hover:text-cyan-400"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">HyperLocal Delivery App</h3>
+                                <p class="text-slate-400 text-sm mb-6">React Native application with real-time geolocation and order tracking for local grocers.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 rounded-full bg-slate-950 border border-slate-800 text-xs text-slate-300">React Native</span>
+                                    <span class="px-3 py-1 rounded-full bg-slate-950 border border-slate-800 text-xs text-slate-300">Firebase</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                        <!-- 2. Our Products (Internal Tools) -->
+                        <div>
+                            <div class="mb-12 reveal">
+                                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">In-House Products</h2>
+                                <div class="h-1 w-20 bg-emerald-500 rounded-full"></div>
+                            </div>
+
+                            <div class="reveal delay-100 rounded-3xl bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 p-8 md:p-12 overflow-hidden relative group">
+                                <!-- Background Map Effect (Subtle Pattern) -->
+                                <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+                                
+                                <!-- Glow Effect -->
+                                <div class="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 blur-[100px] rounded-full pointer-events-none group-hover:bg-emerald-500/20 transition-all duration-500"></div>
+
+                                <div class="flex flex-col md:flex-row items-start gap-8 relative z-10">
+                                    <!-- Logo / Icon Box -->
+                                    <div class="w-20 h-20 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center shrink-0 shadow-lg shadow-emerald-900/20">
+                                        <!-- Leaf + Scan Icon Composite -->
+                                        <div class="relative">
+                                            <i data-lucide="scan-line" class="w-10 h-10 text-emerald-400"></i>
+                                            <i data-lucide="leaf" class="w-4 h-4 text-white absolute -top-1 -right-2 bg-slate-800 rounded-full p-0.5 border border-slate-700"></i>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex-1 space-y-4">
+                                        <div class="flex flex-wrap items-center gap-3">
+                                            <h3 class="text-2xl font-bold text-white">Agralog</h3>
+                                            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-400 uppercase tracking-wide border border-emerald-500/30">
+                                                Mobile app
+                                            </span>
+                                        </div>
+                                        
+                                        <p class="text-slate-400 leading-relaxed max-w-2xl">
+                                            A comprehensive agricultural traceability engine. Monitor the complete journey from farm to fork with geospatial plot mapping, farmer inspection logs, and compliance reporting.
+                                        </p>
+
+                                        <!-- Compliance Badges -->
+                                        <div class="flex flex-wrap gap-2 pt-2">
+                                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-medium text-slate-300 border border-slate-700">NPOP</span>
+                                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-medium text-slate-300 border border-slate-700">NOP (USDA)</span>
+                                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-medium text-slate-300 border border-slate-700">EU Organic</span>
+                                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-medium text-slate-300 border border-slate-700">EUDR</span>
+                                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-medium text-slate-300 border border-slate-700">Fair Trade</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- CTA Button -->
+                                    <div class="w-full md:w-auto mt-4 md:mt-0">
+                                        <button class="w-full px-6 py-3 bg-white hover:bg-emerald-50 text-slate-950 font-bold rounded-lg transition-all flex items-center justify-center gap-2 group/btn">
+                                            View Product
+                                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+    
+            </div>
+        </section>
+    
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="py-24 px-6 bg-slate-900/50">
+        <div class="max-w-6xl mx-auto text-center reveal">
+            <h2 class="text-3xl font-bold text-white mb-16">The Trucecode Standard</h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="space-y-4">
+                    <i data-lucide="shield" class="w-12 h-12 text-indigo-400 mx-auto"></i>
+                    <h4 class="text-lg font-semibold text-white">Robust Security</h4>
+                    <p class="text-slate-400 text-sm">Enterprise-grade protection built into every line.</p>
+                </div>
+                <div class="space-y-4">
+                    <i data-lucide="code-2" class="w-12 h-12 text-indigo-400 mx-auto"></i>
+                    <h4 class="text-lg font-semibold text-white">Clean Architecture</h4>
+                    <p class="text-slate-400 text-sm">Scalable codebases that are easy to maintain.</p>
+                </div>
+                <div class="space-y-4">
+                    <i data-lucide="cpu" class="w-12 h-12 text-indigo-400 mx-auto"></i>
+                    <h4 class="text-lg font-semibold text-white">Automated Logic</h4>
+                    <p class="text-slate-400 text-sm">We automate complex business logic.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact Form -->
+    <footer id="contact" class="py-24 px-6 bg-slate-950 border-t border-slate-800">
+        <div class="max-w-xl mx-auto text-center space-y-8 reveal">
+            <h2 class="text-3xl md:text-4xl font-bold text-white">Start Your Project</h2>
+            <p class="text-slate-400">Tell us what you need. We'll get back to you within 24 hours.</p>
+            
+            <!-- Web3Forms -->
+            <form action="https://api.web3forms.com/submit" method="POST" class="bg-slate-900 p-8 rounded-2xl border border-slate-800 space-y-4 text-left shadow-xl">
+                <!-- IMPORTANT: Replace the value below with your Web3Forms Access Key -->
+                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                
+                <div>
+                    <label class="text-sm font-medium text-slate-300">Email</label>
+                    <input type="email" name="email" required placeholder="you@company.com" class="w-full mt-2 p-3 rounded-lg bg-slate-950 border border-slate-800 text-white focus:border-indigo-500 focus:outline-none transition-colors">
+                </div>
+                
+                <div>
+                    <label class="text-sm font-medium text-slate-300">Project Details</label>
+                    <textarea name="message" required rows="4" placeholder="I need a React dashboard for..." class="w-full mt-2 p-3 rounded-lg bg-slate-950 border border-slate-800 text-white focus:border-indigo-500 focus:outline-none transition-colors"></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-lg transition-all hover:scale-[1.02]">
+                    Send Message
+                </button>
+            </form>
+            
+            <div class="text-sm text-slate-600 pt-12">
+                © 2025 Trucecode Systems.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // 1. Initialize Icons
+        lucide.createIcons();
+
+        // 2. Mobile Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('closed');
+                mobileMenu.classList.add('open');
+            } else {
+                mobileMenu.classList.remove('open');
+                mobileMenu.classList.add('closed');
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+
+        // 3. Navbar Scroll Blur
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('bg-slate-950/80', 'border-slate-800');
+                navbar.classList.remove('border-transparent');
+            } else {
+                navbar.classList.remove('bg-slate-950/80', 'border-slate-800');
+                navbar.classList.add('border-transparent');
+            }
+        });
+
+        // 4. Scroll Animations (IntersectionObserver)
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>
