@@ -6,11 +6,44 @@
     
     <!-- SEO & Social Sharing -->
     <title>Trucecode | End the War on Complex Code</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <meta name="description" content="Trucecode is a modern IT agency specializing in high-performance Web, Mobile (React Native), and ERPNext solutions.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://trucecode.com/">
+    <meta name="theme-color" content="#020617">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Trucecode">
+    <meta property="og:url" content="https://trucecode.com/">
     <meta property="og:title" content="Trucecode | Web & ERP Solutions">
     <meta property="og:description" content="End the war on complex code. High-performance apps and ERPNext solutions.">
-    <meta property="og:image" content="https://ui-avatars.com/api/?name=Truce+Code&background=4f46e5&color=fff&size=512"> 
+    <meta property="og:image" content="https://trucecode.com/android-chrome-512x512.png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:image:alt" content="Trucecode logo">
+    <meta property="og:locale" content="en_US">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Trucecode | Web & ERP Solutions">
+    <meta name="twitter:description" content="End the war on complex code. High-performance apps and ERPNext solutions.">
+    <meta name="twitter:image" content="https://trucecode.com/android-chrome-512x512.png">
+    <meta name="twitter:image:alt" content="Trucecode logo">
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Trucecode",
+            "url": "https://trucecode.com/",
+            "logo": "https://trucecode.com/android-chrome-512x512.png",
+            "description": "Trucecode is a modern IT agency specializing in high-performance Web, Mobile (React Native), and ERPNext solutions."
+        }
+    </script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,6 +100,9 @@
             <div class="hidden md:flex items-center gap-8">
                 <a href="#services" class="text-sm font-medium hover:text-white transition-colors">Services</a>
                 <a href="#why-us" class="text-sm font-medium hover:text-white transition-colors">Why Us</a>
+                <a href="mailto:info@trucecode.com" class="p-2 text-indigo-300 hover:text-indigo-200 transition-colors" aria-label="Email Trucecode">
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                </a>
                 <a href="#contact" class="px-6 py-2 rounded-full border border-indigo-500/30 text-sm font-medium hover:bg-indigo-500/10 transition-colors text-white">
                     Start a Project
                 </a>
@@ -101,6 +137,7 @@
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">
                     complex code.
                 </span>
+                <span class="sr-only">Web development and ERP solutions in Kerala.</span>
             </h1>
             
             <p class="reveal delay-200 text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
@@ -180,123 +217,159 @@
         <section id="work" class="py-24 px-6 bg-slate-950 border-t border-slate-900">
             <div class="max-w-7xl mx-auto space-y-24">
                 
-                <!-- 1. Client Projects (Dummy Data) -->
+                <!-- Completed Projects -->
                 <div>
                     <div class="mb-12 reveal">
                         <div class="flex items-center gap-4 mb-6">
-                            <h2 class="text-3xl md:text-4xl font-bold text-white">Selected Projects</h2>
+                            <h2 class="text-3xl md:text-4xl font-bold text-white">Completed Projects</h2>
                             <span class="px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-xs font-medium text-slate-400">
-                                Work in Progress
+                                Client Work
                             </span>
                         </div>
                         <div class="h-1 w-20 bg-indigo-500 rounded-full"></div>
                     </div>
     
                     <div class="grid md:grid-cols-2 gap-8">
-                        <!-- Dummy Project 1 -->
-                        <div class="reveal delay-100 group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/50 hover:border-indigo-500/50 transition-all duration-300">
-                            <!-- Abstract "Image" Placeholder -->
+                        <a href="https://www.korizo.in" class="reveal delay-100 group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/50 hover:border-cyan-500/50 transition-all duration-300 block focus-visible:ring-2 focus-visible:ring-cyan-500/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950" aria-label="Visit Korizo">
                             <div class="h-64 bg-slate-900 relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-transparent"></div>
-                                <div class="absolute inset-0 flex items-center justify-center">
-                                    <i data-lucide="layout-dashboard" class="w-16 h-16 text-slate-800 group-hover:text-indigo-500/50 transition-colors"></i>
-                                </div>
+                                <img
+                                    src="projects/korizo.png"
+                                    alt="Korizo ecommerce website preview"
+                                    loading="lazy"
+                                    decoding="async"
+                                    class="w-full h-full object-cover"
+                                >
+                                <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent pointer-events-none"></div>
                             </div>
                             
                             <div class="p-8 relative">
-                                <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-12 h-12 bg-slate-950 rounded-full flex items-center justify-center border border-slate-800 group-hover:border-indigo-500 transition-colors">
-                                    <i data-lucide="arrow-up-right" class="w-5 h-5 text-slate-400 group-hover:text-indigo-400"></i>
-                                </div>
-                                <h3 class="text-xl font-bold text-white mb-2">Fintech Analytics Dashboard</h3>
-                                <p class="text-slate-400 text-sm mb-6">A high-performance React dashboard for tracking real-time crypto assets and forex markets.</p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 rounded-full bg-slate-950 border border-slate-800 text-xs text-slate-300">React</span>
-                                    <span class="px-3 py-1 rounded-full bg-slate-950 border border-slate-800 text-xs text-slate-300">Tailwind</span>
-                                    <span class="px-3 py-1 rounded-full bg-slate-950 border border-slate-800 text-xs text-slate-300">D3.js</span>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <!-- Dummy Project 2 -->
-                        <div class="reveal delay-200 group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/50 hover:border-cyan-500/50 transition-all duration-300">
-                            <div class="h-64 bg-slate-900 relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent"></div>
-                                <div class="absolute inset-0 flex items-center justify-center">
-                                    <i data-lucide="shopping-cart" class="w-16 h-16 text-slate-800 group-hover:text-cyan-500/50 transition-colors"></i>
-                                </div>
-                            </div>
-                            
-                            <div class="p-8 relative">
-                                <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-12 h-12 bg-slate-950 rounded-full flex items-center justify-center border border-slate-800 group-hover:border-cyan-500 transition-colors">
+                                <!-- <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-12 h-12 bg-slate-950 rounded-full flex items-center justify-center border border-slate-800 group-hover:border-cyan-500 transition-colors">
                                     <i data-lucide="arrow-up-right" class="w-5 h-5 text-slate-400 group-hover:text-cyan-400"></i>
-                                </div>
-                                <h3 class="text-xl font-bold text-white mb-2">HyperLocal Delivery App</h3>
-                                <p class="text-slate-400 text-sm mb-6">React Native application with real-time geolocation and order tracking for local grocers.</p>
+                                </div> -->
+                                <h3 class="text-xl font-bold text-white mb-2">Korizo Ecommerce Platform</h3>
+                                <p class="text-slate-400 text-sm mb-6">Django-powered ecommerce application for Korizo, delivering a fast, scalable shopping experience.</p>
                                 <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 rounded-full bg-slate-950 border border-slate-800 text-xs text-slate-300">Django</span>
+                                    <span class="px-3 py-1 rounded-full bg-slate-950 border border-slate-800 text-xs text-slate-300">Ecommerce</span>
+                                    <span class="px-3 py-1 rounded-full bg-slate-950 border border-slate-800 text-xs text-cyan-300">www.korizo.in</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="https://linkcore.ae" class="reveal delay-200 group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/50 hover:border-indigo-500/50 transition-all duration-300 block focus-visible:ring-2 focus-visible:ring-indigo-500/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950" aria-label="Visit Link Core Information Technology">
+                            <div class="h-64 bg-slate-900 relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
+                                <img
+                                    src="projects/lcit.png"
+                                    alt="Link Core Information Technology website preview"
+                                    loading="lazy"
+                                    decoding="async"
+                                    class="w-full h-full object-cover"
+                                >
+                                <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-transparent pointer-events-none"></div>
+                            </div>
+                            
+                            <div class="p-8 relative">
+                                <!-- <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-12 h-12 bg-slate-950 rounded-full flex items-center justify-center border border-slate-800 group-hover:border-indigo-500 transition-colors">
+                                    <i data-lucide="arrow-up-right" class="w-5 h-5 text-slate-400 group-hover:text-indigo-400"></i>
+                                </div> -->
+                                <h3 class="text-xl font-bold text-white mb-2">Link Core Information Technology Website</h3>
+                                <p class="text-slate-400 text-sm mb-6">Professional corporate website designed to showcase services, expertise, and brand credibility.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 rounded-full bg-slate-950 border border-slate-800 text-xs text-slate-300">Corporate Website</span>
+                                    <span class="px-3 py-1 rounded-full bg-slate-950 border border-slate-800 text-xs text-slate-300">Responsive Design</span>
+                                    <span class="px-3 py-1 rounded-full bg-slate-950 border border-slate-800 text-xs text-slate-300">Company Profile</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+    
+                <!-- Work in Progress -->
+                <div>
+                    <div class="mb-12 reveal">
+                        <div class="flex items-center gap-4 mb-6">
+                            <h2 class="text-3xl md:text-4xl font-bold text-white">Work in Progress</h2>
+                            <span class="px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-xs font-medium text-slate-400">
+                                In Development
+                            </span>
+                        </div>
+                        <div class="h-1 w-20 bg-amber-500 rounded-full"></div>
+                    </div>
+
+                    <div class="flex flex-col gap-8 md:flex-row">
+                        <div class="reveal delay-100 group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/50 hover:border-amber-500/50 transition-all duration-300 w-full md:w-1/2">
+                            <div class="h-64 bg-slate-900 relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-transparent"></div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <i data-lucide="car" class="w-16 h-16 text-slate-800 group-hover:text-amber-500/50 transition-colors"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="p-8 relative">
+                                <h3 class="text-xl font-bold text-white mb-2">Taxi Booking App</h3>
+                                <p class="text-slate-400 text-sm mb-6">Cross-platform taxi booking product with real-time trip flow and dispatch tooling.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 rounded-full bg-slate-950 border border-slate-800 text-xs text-slate-300">Django</span>
                                     <span class="px-3 py-1 rounded-full bg-slate-950 border border-slate-800 text-xs text-slate-300">React Native</span>
-                                    <span class="px-3 py-1 rounded-full bg-slate-950 border border-slate-800 text-xs text-slate-300">Firebase</span>
+                                    <span class="px-3 py-1 rounded-full bg-slate-950 border border-slate-800 text-xs text-amber-300">Work in Progress</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-    
-                        <!-- 2. Our Products (Internal Tools) -->
-                        <div>
-                            <div class="mb-12 reveal">
-                                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">In-House Products</h2>
-                                <div class="h-1 w-20 bg-emerald-500 rounded-full"></div>
-                            </div>
 
-                            <div class="reveal delay-100 rounded-3xl bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 p-8 md:p-12 overflow-hidden relative group">
-                                <!-- Background Map Effect (Subtle Pattern) -->
-                                <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
-                                
-                                <!-- Glow Effect -->
-                                <div class="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 blur-[100px] rounded-full pointer-events-none group-hover:bg-emerald-500/20 transition-all duration-500"></div>
+                <!-- In-House Products (hidden) -->
+                <!--
+                <div>
+                    <div class="mb-12 reveal">
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">In-House Products</h2>
+                        <div class="h-1 w-20 bg-emerald-500 rounded-full"></div>
+                    </div>
 
-                                <div class="flex flex-col md:flex-row items-start gap-8 relative z-10">
-                                    <!-- Logo / Icon Box -->
-                                    <div class="w-20 h-20 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center shrink-0 shadow-lg shadow-emerald-900/20">
-                                        <!-- Leaf + Scan Icon Composite -->
-                                        <div class="relative">
-                                            <i data-lucide="scan-line" class="w-10 h-10 text-emerald-400"></i>
-                                            <i data-lucide="leaf" class="w-4 h-4 text-white absolute -top-1 -right-2 bg-slate-800 rounded-full p-0.5 border border-slate-700"></i>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="flex-1 space-y-4">
-                                        <div class="flex flex-wrap items-center gap-3">
-                                            <h3 class="text-2xl font-bold text-white">Agralog</h3>
-                                            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-400 uppercase tracking-wide border border-emerald-500/30">
-                                                Mobile app
-                                            </span>
-                                        </div>
-                                        
-                                        <p class="text-slate-400 leading-relaxed max-w-2xl">
-                                            A comprehensive agricultural traceability engine. Monitor the complete journey from farm to fork with geospatial plot mapping, farmer inspection logs, and compliance reporting.
-                                        </p>
+                    <div class="reveal delay-100 rounded-3xl bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 p-8 md:p-12 overflow-hidden relative group">
+                        <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+                        
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 blur-[100px] rounded-full pointer-events-none group-hover:bg-emerald-500/20 transition-all duration-500"></div>
 
-                                        <!-- Compliance Badges -->
-                                        <div class="flex flex-wrap gap-2 pt-2">
-                                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-medium text-slate-300 border border-slate-700">NPOP</span>
-                                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-medium text-slate-300 border border-slate-700">NOP (USDA)</span>
-                                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-medium text-slate-300 border border-slate-700">EU Organic</span>
-                                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-medium text-slate-300 border border-slate-700">EUDR</span>
-                                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-medium text-slate-300 border border-slate-700">Fair Trade</span>
-                                        </div>
-                                    </div>
-
-                                    <!-- CTA Button -->
-                                    <div class="w-full md:w-auto mt-4 md:mt-0">
-                                        <button class="w-full px-6 py-3 bg-white hover:bg-emerald-50 text-slate-950 font-bold rounded-lg transition-all flex items-center justify-center gap-2 group/btn">
-                                            View Product
-                                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
-                                        </button>
-                                    </div>
+                        <div class="flex flex-col md:flex-row items-start gap-8 relative z-10">
+                            <div class="w-20 h-20 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center shrink-0 shadow-lg shadow-emerald-900/20">
+                                <div class="relative">
+                                    <i data-lucide="scan-line" class="w-10 h-10 text-emerald-400"></i>
+                                    <i data-lucide="leaf" class="w-4 h-4 text-white absolute -top-1 -right-2 bg-slate-800 rounded-full p-0.5 border border-slate-700"></i>
                                 </div>
                             </div>
+                            
+                            <div class="flex-1 space-y-4">
+                                <div class="flex flex-wrap items-center gap-3">
+                                    <h3 class="text-2xl font-bold text-white">Agralog</h3>
+                                    <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-400 uppercase tracking-wide border border-emerald-500/30">
+                                        Mobile app
+                                    </span>
+                                </div>
+                                
+                                <p class="text-slate-400 leading-relaxed max-w-2xl">
+                                    A comprehensive agricultural traceability engine. Monitor the complete journey from farm to fork with geospatial plot mapping, farmer inspection logs, and compliance reporting.
+                                </p>
+
+                                <div class="flex flex-wrap gap-2 pt-2">
+                                    <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-medium text-slate-300 border border-slate-700">NPOP</span>
+                                    <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-medium text-slate-300 border border-slate-700">NOP (USDA)</span>
+                                    <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-medium text-slate-300 border border-slate-700">EU Organic</span>
+                                    <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-medium text-slate-300 border border-slate-700">EUDR</span>
+                                    <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-medium text-slate-300 border border-slate-700">Fair Trade</span>
+                                </div>
+                            </div>
+
+                            <div class="w-full md:w-auto mt-4 md:mt-0">
+                                <button class="w-full px-6 py-3 bg-white hover:bg-emerald-50 text-slate-950 font-bold rounded-lg transition-all flex items-center justify-center gap-2 group/btn">
+                                    View Product
+                                    <i data-lucide="arrow-right" class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                                </button>
+                            </div>
                         </div>
+                    </div>
+                </div>
+                -->
 
     
             </div>
@@ -332,6 +405,10 @@
         <div class="max-w-xl mx-auto text-center space-y-8 reveal">
             <h2 class="text-3xl md:text-4xl font-bold text-white">Start Your Project</h2>
             <p class="text-slate-400">Tell us what you need. We'll get back to you within 24 hours.</p>
+            <p class="text-sm text-slate-400">
+                Email us at
+                <a href="mailto:info@trucecode.com" class="text-indigo-300 hover:text-indigo-200">info@trucecode.com</a>
+            </p>
             
             <!-- Web3Forms -->
             <form action="https://api.web3forms.com/submit" method="POST" class="bg-slate-900 p-8 rounded-2xl border border-slate-800 space-y-4 text-left shadow-xl">
@@ -354,7 +431,7 @@
             </form>
             
             <div class="text-sm text-slate-600 pt-12">
-                © 2025 Trucecode Systems.
+                © 2026 Trucecode.
             </div>
         </div>
     </footer>
