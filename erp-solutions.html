@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Trucecode | ERP Solutions in Kochi, Kerala, India</title>
+  <meta name="description" content="ERP solutions in Kochi, Kerala with ERPNext implementation, custom modules, and integrations. Trucecode streamlines finance, inventory, HR, and reporting.">
+  <link rel="canonical" href="https://trucecode.com/erp-solutions.html">
+  <meta name="theme-color" content="#020617">
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "ERP Solutions",
+    "serviceType": "ERPNext Implementation",
+    "provider": {
+      "@type": "Organization",
+      "name": "Trucecode",
+      "url": "https://trucecode.com/"
+    },
+    "areaServed": "Kochi, Kerala, India"
+  }
+  </script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      background: #020617;
+      color: #e5e7eb;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-thumb { background: #f97316; border-radius: 4px; }
+
+    /* Utilities */
+    .container { max-width: 1200px; margin: auto; padding: 0 24px; }
+    .btn {
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: 0.3s ease;
+    }
+    .btn-primary {
+      background: #f97316;
+      color: #fff;
+    }
+    .btn-primary:hover { background: #fb923c; transform: scale(1.05); }
+
+    .btn-outline {
+      border: 1px solid #334155;
+      background: #0f172a;
+    }
+    .nav-contact {
+      padding: 8px 24px;
+      border-radius: 999px;
+      border: 1px solid rgba(249,115,22,.3);
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      background: transparent;
+      transition: 0.3s ease;
+    }
+    .nav-contact:hover { background: rgba(249,115,22,.1); }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 50;
+      backdrop-filter: blur(8px);
+      transition: 0.3s;
+    }
+    nav.scrolled {
+      background: rgba(2,6,23,.85);
+      border-bottom: 1px solid #1e293b;
+    }
+    .nav-inner {
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo i { width: 28px; height: 28px; color: #6366f1; }
+    .brand { color: #fff; }
+    .brand-accent { color: #6366f1; }
+
+    .nav-links {
+      display: none;
+      gap: 24px;
+      align-items: center;
+    }
+    .icon-link {
+      padding: 8px;
+      border-radius: 10px;
+      color: #f97316;
+      transition: 0.2s ease;
+    }
+    .icon-link:hover { color: #fb923c; }
+    .menu-btn { background: none; border: none; color: #fff; }
+
+    @media (min-width: 768px) {
+      .nav-links { display: flex; }
+      .menu-btn { display: none; }
+    }
+
+    /* Mobile Menu */
+    #mobile-menu {
+      position: fixed;
+      inset: 0;
+      background: rgba(2,6,23,.95);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      transform: translateX(100%);
+      transition: .3s;
+      z-index: 40;
+    }
+    #mobile-menu.open { transform: translateX(0); }
+
+    /* Hero */
+    header {
+      padding: 160px 0 120px;
+      background-image: radial-gradient(rgba(249,115,22,.25) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+    .hero-grid {
+      display: grid;
+      gap: 48px;
+    }
+    @media (min-width: 1024px) {
+      .hero-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    h1 {
+      font-size: clamp(36px, 6vw, 60px);
+      font-weight: 800;
+      line-height: 1.1;
+    }
+    .gradient-text {
+      background: linear-gradient(to right, #fb923c, #facc15);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .breadcrumbs {
+      display: block;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: #94a3b8;
+      margin-bottom: 16px;
+      justify-content: flex-start;
+      text-align: left;
+      margin-top: 0;
+      line-height: 1.4;
+    }
+    .breadcrumbs a { color: #cbd5f5; }
+    .breadcrumbs a:hover { color: #fb923c; }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(249,115,22,.15);
+      border: 1px solid rgba(249,115,22,.35);
+      color: #fdba74;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+      margin-top: 35px;
+      line-height: 1.4;
+    }
+    .badge .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #fb923c;
+      box-shadow: 0 0 10px rgba(251,146,60,.6);
+    }
+
+    .hero-sub {
+      margin: 24px 0 16px;
+      color: #94a3b8;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+    .hero-points {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .hero-points li {
+      display: flex;
+      gap: 10px;
+      color: #cbd5f5;
+      font-size: 14px;
+    }
+    .hero-points i { color: #fb923c; margin-top: 2px; }
+
+    /* Cards */
+    .card {
+      background: rgba(15,23,42,.7);
+      border: 1px solid #1e293b;
+      border-radius: 20px;
+      padding: 24px;
+    }
+    .card h3 { font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+    .card p { color: #94a3b8; font-size: 14px; line-height: 1.6; }
+
+    /* Sections */
+    section { padding: 96px 0; }
+    section.alt { background: rgba(15,23,42,.4); }
+
+    .grid-3 { display: grid; gap: 24px; }
+    @media (min-width: 768px) {
+      .grid-3 { grid-template-columns: repeat(3,1fr); }
+    }
+
+    .grid-4 { display: grid; gap: 24px; }
+    @media (min-width: 768px) {
+      .grid-4 { grid-template-columns: repeat(4,1fr); }
+    }
+
+    /* Reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: .8s ease;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid #1e293b;
+      padding: 96px 0;
+    }
+    form {
+      background: #0f172a;
+      padding: 32px;
+      border-radius: 20px;
+      border: 1px solid #1e293b;
+    }
+    input, textarea {
+      width: 100%;
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      padding: 12px;
+      color: #fff;
+      margin-top: 8px;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #f97316;
+    }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+    .tag {
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      font-size: 14px;
+      color: #cbd5f5;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="/" class="logo" aria-label="Trucecode home">
+      <i data-lucide="terminal"></i>
+      <span class="brand">TRUCE<span class="brand-accent">CODE</span></span>
+    </a>
+
+    <div class="nav-links">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#why-us">Why Us</a>
+      <a href="mailto:info@trucecode.com" class="icon-link" aria-label="Email Trucecode">
+        <i data-lucide="mail"></i>
+      </a>
+      <a href="#contact" class="nav-contact">Contact</a>
+    </div>
+
+    <button class="menu-btn" id="menu-btn">
+      <i data-lucide="menu"></i>
+    </button>
+  </div>
+</nav>
+
+<div id="mobile-menu">
+  <a href="index.html#services">Services</a>
+  <a href="index.html#why-us">Why Us</a>
+  <a href="#contact" style="color:#fb923c">Contact</a>
+</div>
+
+<!-- HERO -->
+<header>
+  <div class="container" style="max-width: 980px; text-align: center;">
+    <div class="reveal">
+      <div class="badge" style="margin-left:auto;margin-right:auto;">
+        <span class="dot"></span>
+        ERP Solutions in Kochi, Kerala
+      </div>
+      <nav class="breadcrumbs" aria-label="Breadcrumb" style="justify-content:flex-start;text-align:left;">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="index.html#services">Services</a>
+        <span>/</span>
+        <span>ERP Solutions</span>
+      </nav>
+      <h1>
+        TruceCode ERP Solutions in <br>
+        <span class="gradient-text">Kerala</span>
+      </h1>
+      <p class="hero-sub" style="max-width: 720px; margin-left:auto;margin-right:auto;">
+        ERP solutions in Kochi, Kerala for growing businesses. We implement ERPNext,
+        customize workflows, and integrate finance, inventory, HR, and reporting
+        into one reliable system.
+      </p>
+      <ul class="hero-points" style="max-width: 520px; margin-left:auto;margin-right:auto;">
+        <li><i data-lucide="check-circle"></i> ERPNext implementation & data migration</li>
+        <li><i data-lucide="check-circle"></i> Custom modules with the Frappe framework</li>
+        <li><i data-lucide="check-circle"></i> Mobile-friendly dashboards & role-based access</li>
+      </ul>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center">
+        <a href="#contact" class="btn btn-primary">
+          Start ERP Project <i data-lucide="arrow-right"></i>
+        </a>
+        <a href="index.html#services" class="btn btn-outline">View Services</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- MODULES -->
+<section>
+  <div class="container">
+    <h2 class="reveal">Modules We Implement</h2>
+    <div class="grid-3" style="margin-top:32px">
+      <div class="card reveal">
+        <h3>Finance & Accounts</h3>
+        <p>General ledger, invoicing, cash flow, and statutory reporting.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Inventory & Procurement</h3>
+        <p>Stock visibility, purchasing workflows, and vendor management.</p>
+      </div>
+      <div class="card reveal">
+        <h3>HR & Payroll</h3>
+        <p>Attendance, payroll, leave, and employee lifecycle automation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ERP SERVICES -->
+<section class="alt">
+  <div class="container">
+    <h2 class="reveal">ERPNext Services in Kerala</h2>
+    <p class="reveal" style="margin-top:12px;color:#94a3b8">
+      From discovery to go-live, we cover every step of ERPNext implementation and support.
+    </p>
+    <div class="grid-4" style="margin-top:32px">
+      <div class="card reveal">
+        <h3>Implementation</h3>
+        <p>ERPNext setup, data migration, and core module configuration.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Custom Modules</h3>
+        <p>Frappe-based apps tailored to your unique workflows.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Integrations</h3>
+        <p>Connect payments, CRM, BI, and third-party tools.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Training & Support</h3>
+        <p>User onboarding, SOPs, and continuous optimization.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section>
+  <div class="container">
+    <h2 class="reveal">Implementation Roadmap</h2>
+    <p class="reveal" style="margin-top:12px;color:#94a3b8">
+      A clear rollout plan keeps teams aligned and reduces risk during migration.
+    </p>
+    <div class="grid-4" style="margin-top:32px">
+      <div class="card reveal">
+        <h3>Audit</h3>
+        <p>Process mapping, data cleanup, and requirements.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Setup</h3>
+        <p>Core modules, roles, and permissions configured.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Customize</h3>
+        <p>Custom workflows, reports, and integrations.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Adopt</h3>
+        <p>Training, go-live, and ongoing improvements.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CORE STACK -->
+<section class="alt">
+  <div class="container">
+    <h2 class="reveal">Core ERP Stack</h2>
+    <p class="reveal" style="margin-top:12px;color:#94a3b8">
+      We build on ERPNext and Frappe to deliver stable, scalable ERP solutions in Kerala.
+    </p>
+    <div class="tags reveal">
+      <span class="tag">ERPNext</span>
+      <span class="tag">Frappe Framework</span>
+      <span class="tag">Python</span>
+      <span class="tag">MariaDB</span>
+      <span class="tag">REST APIs</span>
+      <span class="tag">Workflow Automation</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<footer id="contact">
+  <div class="container reveal" style="max-width:520px;text-align:center">
+    <h2>Start Your ERP Project</h2>
+    <p style="margin:12px 0;color:#94a3b8">
+      Email us at <a href="mailto:info@trucecode.com" style="color:#fb923c">info@trucecode.com</a>
+    </p>
+
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="06152d59-bfc5-4aae-b672-6a1b64255750">
+
+      <label>Email</label>
+      <input type="email" name="email" required>
+
+      <label style="margin-top:16px;display:block">Project Details</label>
+      <textarea rows="4" name="message" required></textarea>
+
+      <button class="btn btn-primary" style="width:100%;margin-top:16px">
+        Send Message
+      </button>
+    </form>
+
+    <p style="margin-top:48px;color:#64748b">© 2026 Trucecode</p>
+  </div>
+</footer>
+
+<script>
+  lucide.createIcons();
+
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  menuBtn.onclick = () => mobileMenu.classList.toggle("open");
+
+  const navbar = document.getElementById("navbar");
+  window.addEventListener("scroll", () => {
+    navbar.classList.toggle("scrolled", window.scrollY > 20);
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => e.isIntersecting && e.target.classList.add("active"));
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
