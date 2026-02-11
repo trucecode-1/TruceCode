@@ -18,6 +18,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+          colors: { slate: { 950: '#020617' } }
+        }
+      }
+    }
+  </script>
+
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
@@ -143,10 +156,11 @@
       align-items: center;
       gap: 32px;
       transform: translateX(100%);
-      transition: .3s;
+      transition: transform 0.3s ease-in-out;
       z-index: 40;
     }
     #mobile-menu.open { transform: translateX(0); }
+    #mobile-menu.closed { transform: translateX(100%); }
 
     /* Hero */
     header {
@@ -309,32 +323,41 @@
 <body>
 
 <!-- NAV -->
-<nav id="navbar">
-  <div class="container nav-inner">
-    <a href="/" class="logo" aria-label="Trucecode home">
-      <i data-lucide="terminal"></i>
-      <span class="brand">TRUCE<span class="brand-accent">CODE</span></span>
+<nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 border-b border-transparent backdrop-blur-sm">
+  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2 z-50" aria-label="Trucecode home">
+      <i data-lucide="terminal" class="w-8 h-8 text-indigo-500"></i>
+      <span class="text-xl font-bold tracking-tight text-white">
+        TRUCE<span class="text-indigo-500">CODE</span>
+      </span>
     </a>
 
-    <div class="nav-links">
-      <a href="index.html#services">Services</a>
-      <a href="index.html#why-us">Why Us</a>
-      <a href="mailto:info@trucecode.com" class="icon-link" aria-label="Email Trucecode">
-        <i data-lucide="mail"></i>
+    <!-- Desktop Nav -->
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#services" class="text-sm font-medium hover:text-white transition-colors">Services</a>
+      <a href="#why-us" class="text-sm font-medium hover:text-white transition-colors">Why Us</a>
+      <a href="blog.html" class="text-sm font-medium hover:text-white transition-colors">Blog</a>
+      <a href="mailto:info@trucecode.com" class="p-2 text-indigo-300 hover:text-indigo-200 transition-colors" aria-label="Email Trucecode">
+        <i data-lucide="mail" class="w-5 h-5"></i>
       </a>
-      <a href="#contact" class="nav-contact">Contact</a>
+      <a href="#contact" class="px-6 py-2 rounded-full border border-indigo-500/30 text-sm font-medium hover:bg-indigo-500/10 transition-colors text-white">
+        Start a Project
+      </a>
     </div>
 
-    <button class="menu-btn" id="menu-btn">
-      <i data-lucide="menu"></i>
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" class="md:hidden z-50 text-white p-2">
+      <i data-lucide="menu" class="w-6 h-6"></i>
     </button>
   </div>
 </nav>
 
-<div id="mobile-menu">
-  <a href="index.html#services">Services</a>
-  <a href="index.html#why-us">Why Us</a>
-  <a href="#contact" style="color:#fb923c">Contact</a>
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="closed fixed inset-0 z-40 bg-slate-950/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8">
+  <a href="#services" class="text-2xl font-bold text-white mobile-link">Services</a>
+  <a href="#why-us" class="text-2xl font-bold text-white mobile-link">Why Us</a>
+  <a href="blog.html" class="text-2xl font-bold text-white mobile-link">Blog</a>
+  <a href="#contact" class="text-2xl font-bold text-indigo-400 mobile-link">Start Project</a>
 </div>
 
 <!-- HERO -->
@@ -502,11 +525,32 @@
 
   const menuBtn = document.getElementById("menu-btn");
   const mobileMenu = document.getElementById("mobile-menu");
-  menuBtn.onclick = () => mobileMenu.classList.toggle("open");
+  const mobileLinks = document.querySelectorAll(".mobile-link");
+  let isMenuOpen = false;
+
+  function toggleMenu() {
+    isMenuOpen = !isMenuOpen;
+    if (isMenuOpen) {
+      mobileMenu.classList.remove("closed");
+      mobileMenu.classList.add("open");
+    } else {
+      mobileMenu.classList.remove("open");
+      mobileMenu.classList.add("closed");
+    }
+  }
+
+  menuBtn.addEventListener("click", toggleMenu);
+  mobileLinks.forEach(link => link.addEventListener("click", toggleMenu));
 
   const navbar = document.getElementById("navbar");
   window.addEventListener("scroll", () => {
-    navbar.classList.toggle("scrolled", window.scrollY > 20);
+    if (window.scrollY > 20) {
+      navbar.classList.add("bg-slate-950/80", "border-slate-800");
+      navbar.classList.remove("border-transparent");
+    } else {
+      navbar.classList.remove("bg-slate-950/80", "border-slate-800");
+      navbar.classList.add("border-transparent");
+    }
   });
 
   const observer = new IntersectionObserver(entries => {

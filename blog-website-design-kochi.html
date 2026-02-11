@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Design Checklist for Kochi Businesses | Trucecode</title>
+  <meta name="description" content="A practical website design checklist for Kochi business owners. Improve UX, SEO, and conversions with mobile-friendly design." />
+  <link rel="canonical" href="https://trucecode.com/blog-website-design-kochi.html" />
+  <meta name="robots" content="index,follow" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+          colors: { slate: { 950: '#020617' } }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    :root {
+      --bg: #0b1120;
+      --panel: #0f172a;
+      --border: #1e293b;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --accent: #6366f1;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Plus Jakarta Sans", sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; padding-top: 96px; }
+    a { color: inherit; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+    .site-header { border-bottom: 1px solid var(--border); background: rgba(11,17,32,0.95); position: sticky; top: 0; z-index: 10; }
+    .nav { display:flex; align-items:center; justify-content:space-between; padding: 16px 0; gap: 16px; flex-wrap: wrap; }
+    .logo { font-weight: 800; font-size: 20px; }
+    .logo span { color: var(--accent); }
+    .nav-links { display:flex; gap:16px; flex-wrap: wrap; align-items:center; }
+    .btn { padding: 8px 16px; border-radius: 999px; border: 1px solid rgba(99,102,241,.4); font-weight: 600; text-decoration: none; }
+
+    .breadcrumbs { font-size: 14px; color: var(--muted); margin: 24px 0 8px; }
+    .breadcrumbs a { color: #cbd5f5; }
+    h1 { font-size: clamp(30px, 4vw, 46px); line-height: 1.2; margin: 0 0 12px; }
+    h2 { margin-top: 32px; }
+    .card { background: var(--panel); border: 1px solid var(--border); padding: 18px; border-radius: 14px; }
+    .muted { color: var(--muted); }
+    .cta { background: rgba(99,102,241,.15); border: 1px solid rgba(99,102,241,.3); padding: 20px; border-radius: 16px; margin: 32px 0; }
+    footer { border-top: 1px solid var(--border); padding: 24px 0; color: var(--muted); }
+
+    #mobile-menu { transition: transform 0.3s ease-in-out; }
+    #mobile-menu.open { transform: translateX(0); }
+    #mobile-menu.closed { transform: translateX(100%); }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Website Design Checklist for Kochi Businesses",
+    "datePublished": "2026-02-11",
+    "dateModified": "2026-02-11",
+    "author": {"@type": "Organization", "name": "Trucecode"},
+    "publisher": {"@type": "Organization", "name": "Trucecode", "logo": {"@type": "ImageObject", "url": "https://trucecode.com/android-chrome-512x512.png"}},
+    "mainEntityOfPage": "https://trucecode.com/blog-website-design-kochi.html"
+  }
+  </script>
+</head>
+<body>
+  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 border-b border-transparent backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2 z-50" aria-label="Trucecode home">
+        <i data-lucide="terminal" class="w-8 h-8 text-indigo-500"></i>
+        <span class="text-xl font-bold tracking-tight text-white">
+          TRUCE<span class="text-indigo-500">CODE</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#services" class="text-sm font-medium hover:text-white transition-colors">Services</a>
+        <a href="#why-us" class="text-sm font-medium hover:text-white transition-colors">Why Us</a>
+        <a href="blog.html" class="text-sm font-medium hover:text-white transition-colors">Blog</a>
+        <a href="mailto:info@trucecode.com" class="p-2 text-indigo-300 hover:text-indigo-200 transition-colors" aria-label="Email Trucecode">
+          <i data-lucide="mail" class="w-5 h-5"></i>
+        </a>
+        <a href="#contact" class="px-6 py-2 rounded-full border border-indigo-500/30 text-sm font-medium hover:bg-indigo-500/10 transition-colors text-white">
+          Start a Project
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden z-50 text-white p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="closed fixed inset-0 z-40 bg-slate-950/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8">
+    <a href="#services" class="text-2xl font-bold text-white mobile-link">Services</a>
+    <a href="#why-us" class="text-2xl font-bold text-white mobile-link">Why Us</a>
+    <a href="blog.html" class="text-2xl font-bold text-white mobile-link">Blog</a>
+    <a href="#contact" class="text-2xl font-bold text-indigo-400 mobile-link">Start Project</a>
+  </div>
+
+  <main class="container">
+    <div class="breadcrumbs">
+      <a href="index.html">Home</a> / <a href="blog.html">Blog</a> / <span>Website Design Checklist</span>
+    </div>
+
+    <h1>Website Design Checklist for Kochi Businesses</h1>
+    <p class="muted">Target keywords: website design in Kochi, website development in Kerala, mobile-friendly website design.</p>
+
+    <p>For business owners in Kochi, a modern website is a sales asset, not just a brochure. The checklist below focuses on conversion, SEO readiness, and mobile usability to help you generate service inquiries.</p>
+
+    <h2>1. Mobile-first layout</h2>
+    <p>Most local search traffic is mobile. Make sure your hero section, CTAs, and contact options are visible without scrolling.</p>
+
+    <h2>2. Local SEO structure</h2>
+    <p>Include your service area (Kochi, Kerala) in headings and page metadata. Google recommends clear structure and helpful content for users. See <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" target="_blank" rel="noopener">Google Search Central</a>.</p>
+
+    <h2>3. Fast load times</h2>
+    <p>Speed is a ranking and conversion factor. Optimize images, minimize scripts, and validate Core Web Vitals. Guidance: <a href="https://web.dev/vitals/" target="_blank" rel="noopener">web.dev Core Web Vitals</a>.</p>
+
+    <h2>4. Clear service positioning</h2>
+    <p>Explain what you do in simple language. Use one primary CTA (email or inquiry form) to reduce friction.</p>
+
+    <h2>5. Trust signals</h2>
+    <p>Add reviews, project highlights, certifications, and a clear about section. These elements improve conversions and E‑E‑A‑T.</p>
+
+    <div class="card">
+      <h3>Need a website design audit?</h3>
+      <p class="muted">We review your current site and share quick wins for UX, SEO, and speed improvements.</p>
+      <p><a href="mailto:info@trucecode.com">Email info@trucecode.com</a></p>
+    </div>
+
+    <div class="cta" id="contact">
+      <h2>Related services</h2>
+      <ul>
+        <li><a href="services-kochi.html">Website development in Kochi, Kerala</a></li>
+        <li><a href="web-development.html">Web Development services</a></li>
+        <li><a href="blog-app-development-kochi.html">App development in Kochi: practical guide</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">© 2026 Trucecode. All rights reserved.</div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    let isMenuOpen = false;
+
+    function toggleMenu() {
+      isMenuOpen = !isMenuOpen;
+      if (isMenuOpen) {
+        mobileMenu.classList.remove('closed');
+        mobileMenu.classList.add('open');
+      } else {
+        mobileMenu.classList.remove('open');
+        mobileMenu.classList.add('closed');
+      }
+    }
+
+    menuBtn.addEventListener('click', toggleMenu);
+    mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        navbar.classList.add('bg-slate-950/80', 'border-slate-800');
+        navbar.classList.remove('border-transparent');
+      } else {
+        navbar.classList.remove('bg-slate-950/80', 'border-slate-800');
+        navbar.classList.add('border-transparent');
+      }
+    });
+  </script>
+</body>
+</html>

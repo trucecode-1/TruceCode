@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO & Social Sharing -->
+    <title>Trucecode Blog | Web, App & ERP Insights in Kerala</title>
+    <meta name="description" content="Trucecode blog for web development, app development, and ERP insights in Kerala. Practical tips on SEO, performance, and digital growth.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://trucecode.com/blog.html">
+    <meta name="theme-color" content="#020617">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Trucecode">
+    <meta property="og:url" content="https://trucecode.com/blog.html">
+    <meta property="og:title" content="Trucecode Blog | Web, App & ERP Insights in Kerala">
+    <meta property="og:description" content="Practical SEO, web, app, and ERPNext insights from Trucecode.">
+    <meta property="og:image" content="https://trucecode.com/android-chrome-512x512.png">
+    <meta property="og:image:alt" content="Trucecode logo">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Trucecode Blog | Web, App & ERP Insights in Kerala">
+    <meta name="twitter:description" content="Practical SEO, web, app, and ERPNext insights from Trucecode.">
+    <meta name="twitter:image" content="https://trucecode.com/android-chrome-512x512.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+                    colors: { slate: { 950: '#020617' } }
+                }
+            }
+        }
+    </script>
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #020617; }
+        ::-webkit-scrollbar-thumb { background: #3730a3; border-radius: 4px; }
+
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        #mobile-menu { transition: transform 0.3s ease-in-out; }
+        #mobile-menu.open { transform: translateX(0); }
+        #mobile-menu.closed { transform: translateX(100%); }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 selection:bg-indigo-500 selection:text-white overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 border-b border-transparent backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2 z-50" aria-label="Trucecode home">
+                <i data-lucide="terminal" class="w-8 h-8 text-indigo-500"></i>
+                <span class="text-xl font-bold tracking-tight text-white">
+                    TRUCE<span class="text-indigo-500">CODE</span>
+                </span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#services" class="text-sm font-medium hover:text-white transition-colors">Services</a>
+                <a href="#why-us" class="text-sm font-medium hover:text-white transition-colors">Why Us</a>
+                <a href="blog.html" class="text-sm font-medium hover:text-white transition-colors">Blog</a>
+                <a href="mailto:info@trucecode.com" class="p-2 text-indigo-300 hover:text-indigo-200 transition-colors" aria-label="Email Trucecode">
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                </a>
+                <a href="#contact" class="px-6 py-2 rounded-full border border-indigo-500/30 text-sm font-medium hover:bg-indigo-500/10 transition-colors text-white">
+                    Start a Project
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden z-50 text-white p-2">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="closed fixed inset-0 z-40 bg-slate-950/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8">
+        <a href="#services" class="text-2xl font-bold text-white mobile-link">Services</a>
+        <a href="#why-us" class="text-2xl font-bold text-white mobile-link">Why Us</a>
+        <a href="blog.html" class="text-2xl font-bold text-white mobile-link">Blog</a>
+        <a href="#contact" class="text-2xl font-bold text-indigo-400 mobile-link">Start Project</a>
+    </div>
+
+    <!-- Hero -->
+    <header class="relative pt-32 pb-16 lg:pt-40 lg:pb-20 px-6 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[420px] bg-indigo-600/20 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto text-center space-y-6">
+            <div class="reveal inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-900/30 border border-indigo-500/30 text-indigo-300 text-xs font-semibold tracking-wide uppercase">
+                <span class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
+                Trucecode Insights
+            </div>
+
+            <h1 class="reveal delay-100 text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                Web, App & ERP tips for
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Kerala businesses</span>
+            </h1>
+
+            <p class="reveal delay-200 text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                Practical guides on SEO, performance, mobile-friendly design, and ERPNext implementation from the Trucecode team.
+            </p>
+        </div>
+    </header>
+
+    <!-- Blog Grid -->
+    <section class="py-20 px-6 border-t border-slate-900">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-12 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Latest Articles</h2>
+                <div class="h-1 w-20 bg-indigo-500 rounded-full mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <a href="blog-website-design-kochi.html" class="reveal delay-100 block">
+                    <article class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition-colors">
+                        <p class="text-xs text-indigo-300 font-semibold mb-3">Website Design</p>
+                        <h3 class="text-lg font-semibold text-white mb-2">Website design checklist for Kochi businesses</h3>
+                        <p class="text-sm text-slate-400">Design, UX, and SEO basics that convert visitors into inquiries.</p>
+                    </article>
+                </a>
+                <a href="blog-app-development-kochi.html" class="reveal delay-200 block">
+                    <article class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-cyan-500/50 transition-colors">
+                        <p class="text-xs text-cyan-300 font-semibold mb-3">App Development</p>
+                        <h3 class="text-lg font-semibold text-white mb-2">App development in Kochi: a practical guide</h3>
+                        <p class="text-sm text-slate-400">What business owners should plan before building iOS and Android apps.</p>
+                    </article>
+                </a>
+                <a href="blog-erp-solutions-kochi.html" class="reveal delay-300 block">
+                    <article class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-orange-500/50 transition-colors">
+                        <p class="text-xs text-orange-300 font-semibold mb-3">ERPNext</p>
+                        <h3 class="text-lg font-semibold text-white mb-2">ERPNext modules every SME should start with</h3>
+                        <p class="text-sm text-slate-400">A roadmap to implement ERPNext without disrupting operations.</p>
+                    </article>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 px-6 bg-slate-900/40" id="contact">
+        <div class="max-w-4xl mx-auto text-center space-y-6 reveal">
+            <h2 class="text-3xl md:text-4xl font-bold text-white">Need help with your next build?</h2>
+            <p class="text-slate-400">We design high-performance websites, mobile apps, and ERP solutions for growing teams in Kerala.</p>
+            <a href="index.html#contact" class="inline-flex items-center gap-2 px-8 py-4 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg font-semibold transition-all">
+                Start a Project <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-16 px-6 border-t border-slate-800">
+        <div class="max-w-5xl mx-auto text-center text-sm text-slate-500">
+            © 2026 Trucecode. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        lucide.createIcons();
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('closed');
+                mobileMenu.classList.add('open');
+            } else {
+                mobileMenu.classList.remove('open');
+                mobileMenu.classList.add('closed');
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('bg-slate-950/80', 'border-slate-800');
+                navbar.classList.remove('border-transparent');
+            } else {
+                navbar.classList.remove('bg-slate-950/80', 'border-slate-800');
+                navbar.classList.add('border-transparent');
+            }
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>

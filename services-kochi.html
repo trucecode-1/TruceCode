@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Development in Kochi, Kerala | Trucecode</title>
+  <meta name="description" content="Trucecode provides website development, website design, app development, and ERP solutions in Kochi, Kerala for business owners focused on growth." />
+  <link rel="canonical" href="https://trucecode.com/services-kochi.html" />
+  <meta name="robots" content="index,follow" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+          colors: { slate: { 950: '#020617' } }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    :root {
+      --bg: #0b1120;
+      --panel: #0f172a;
+      --border: #1e293b;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --accent: #6366f1;
+      --accent-2: #22d3ee;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Plus Jakarta Sans", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding-top: 96px;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: rgba(11, 17, 32, 0.9);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(8px);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 0;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .logo { font-weight: 800; font-size: 20px; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; }
+    .nav-links a:hover { color: #fff; }
+    .btn {
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(99,102,241,.4);
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+    .btn:hover { background: rgba(99,102,241,.15); }
+
+    .hero { padding: 70px 0 40px; }
+    .breadcrumbs { font-size: 14px; color: var(--muted); }
+    .breadcrumbs a { color: #cbd5f5; }
+    .breadcrumbs a:hover { color: #fff; }
+    h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.1; margin: 16px 0; }
+    h2 { font-size: clamp(22px, 3vw, 32px); margin-top: 0; }
+    h3 { margin-top: 0; }
+    .muted { color: var(--muted); }
+
+    .grid { display: grid; gap: 20px; }
+    @media (min-width: 768px) {
+      .grid-2 { grid-template-columns: repeat(2, 1fr); }
+      .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+    }
+
+    .section { padding: 40px 0; }
+    .section.alt { background: rgba(15, 23, 42, 0.6); }
+
+    .cta {
+      background: linear-gradient(120deg, rgba(99,102,241,.2), rgba(34,211,238,.12));
+      border: 1px solid rgba(99,102,241,.3);
+      border-radius: 20px;
+      padding: 28px;
+      text-align: center;
+    }
+
+    .list { padding-left: 18px; color: var(--muted); }
+    footer { border-top: 1px solid var(--border); padding: 30px 0; color: var(--muted); }
+
+    #mobile-menu { transition: transform 0.3s ease-in-out; }
+    #mobile-menu.open { transform: translateX(0); }
+    #mobile-menu.closed { transform: translateX(100%); }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Website Development in Kochi, Kerala",
+    "serviceType": "Web Development, Website Design, ERP Solutions, App Development",
+    "provider": {
+      "@type": "Organization",
+      "name": "Trucecode",
+      "url": "https://trucecode.com"
+    },
+    "areaServed": "Kochi, Kerala, India",
+    "url": "https://trucecode.com/services-kochi.html"
+  }
+  </script>
+</head>
+<body>
+  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 border-b border-transparent backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2 z-50" aria-label="Trucecode home">
+        <i data-lucide="terminal" class="w-8 h-8 text-indigo-500"></i>
+        <span class="text-xl font-bold tracking-tight text-white">
+          TRUCE<span class="text-indigo-500">CODE</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#services" class="text-sm font-medium hover:text-white transition-colors">Services</a>
+        <a href="#why-us" class="text-sm font-medium hover:text-white transition-colors">Why Us</a>
+        <a href="blog.html" class="text-sm font-medium hover:text-white transition-colors">Blog</a>
+        <a href="mailto:info@trucecode.com" class="p-2 text-indigo-300 hover:text-indigo-200 transition-colors" aria-label="Email Trucecode">
+          <i data-lucide="mail" class="w-5 h-5"></i>
+        </a>
+        <a href="#contact" class="px-6 py-2 rounded-full border border-indigo-500/30 text-sm font-medium hover:bg-indigo-500/10 transition-colors text-white">
+          Start a Project
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden z-50 text-white p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="closed fixed inset-0 z-40 bg-slate-950/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8">
+    <a href="#services" class="text-2xl font-bold text-white mobile-link">Services</a>
+    <a href="#why-us" class="text-2xl font-bold text-white mobile-link">Why Us</a>
+    <a href="blog.html" class="text-2xl font-bold text-white mobile-link">Blog</a>
+    <a href="#contact" class="text-2xl font-bold text-indigo-400 mobile-link">Start Project</a>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a> / <span>Services</span>
+        </div>
+        <h1>Website Development in Kochi, Kerala</h1>
+        <p class="muted">
+          Trucecode helps business owners in Kochi build modern websites, mobile-friendly apps, and ERP solutions that generate service inquiries. We focus on SEO-ready design, clean code, and measurable results.
+        </p>
+        <div class="grid grid-2" style="margin-top: 24px;">
+          <div class="card">
+            <h3>Primary Focus</h3>
+            <p class="muted">Website development and website design for local businesses that need visibility and conversions.</p>
+          </div>
+          <div class="card">
+            <h3>Supporting Solutions</h3>
+            <p class="muted">App development and ERP solutions to automate operations and improve customer experience.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <h2>Core Services for Kochi Businesses</h2>
+        <div class="grid grid-2" style="margin-top: 20px;">
+          <div class="card">
+            <h3>Website Development & Design</h3>
+            <p class="muted">Conversion-focused websites with strong SEO foundations, built for fast performance.</p>
+            <p><a href="web-development.html">Explore Web Development</a></p>
+          </div>
+          <div class="card">
+            <h3>App Development</h3>
+            <p class="muted">React Native apps for Android and iOS with clean UX and scalable APIs.</p>
+            <p><a href="app-development.html">Explore App Development</a></p>
+          </div>
+          <div class="card">
+            <h3>ERP Solutions</h3>
+            <p class="muted">ERPNext implementation, custom modules, and integrations for streamlined operations.</p>
+            <p><a href="erp-solutions.html">Explore ERP Solutions</a></p>
+          </div>
+          <div class="card">
+            <h3>Local SEO Readiness</h3>
+            <p class="muted">Content structure, metadata, and technical SEO to rank locally in Kerala.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Why Trucecode</h2>
+        <div class="grid grid-3" style="margin-top: 20px;">
+          <div class="card">
+            <h3>Local Market Insight</h3>
+            <p class="muted">We understand Kochi business needs, local search behavior, and conversion patterns.</p>
+          </div>
+          <div class="card">
+            <h3>SEO + Performance</h3>
+            <p class="muted">Fast-loading pages, clean architecture, and Google-friendly structure.</p>
+          </div>
+          <div class="card">
+            <h3>Business-First Delivery</h3>
+            <p class="muted">Every project is built to drive service inquiries and long-term growth.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <h2>Process for Service Inquiries</h2>
+        <ol class="list">
+          <li>Discovery: goals, competitors, and local SEO priorities.</li>
+          <li>Design: conversion-focused layouts and content structure.</li>
+          <li>Build: fast, mobile-friendly implementation.</li>
+          <li>Launch: tracking, analytics, and iteration for better results.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Related Insights</h2>
+        <ul class="list">
+          <li><a href="blog-website-design-kochi.html">Website design checklist for Kochi businesses</a></li>
+          <li><a href="blog-app-development-kochi.html">App development in Kochi: a practical guide</a></li>
+          <li><a href="blog-erp-solutions-kochi.html">ERP solutions for SMEs in Kochi</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container cta">
+        <h2>Ready for service inquiries?</h2>
+        <p class="muted">Email us your requirements and we will respond within 24 hours.</p>
+        <a class="btn" href="mailto:info@trucecode.com">info@trucecode.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2026 Trucecode. All rights reserved.</div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    let isMenuOpen = false;
+
+    function toggleMenu() {
+      isMenuOpen = !isMenuOpen;
+      if (isMenuOpen) {
+        mobileMenu.classList.remove('closed');
+        mobileMenu.classList.add('open');
+      } else {
+        mobileMenu.classList.remove('open');
+        mobileMenu.classList.add('closed');
+      }
+    }
+
+    menuBtn.addEventListener('click', toggleMenu);
+    mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        navbar.classList.add('bg-slate-950/80', 'border-slate-800');
+        navbar.classList.remove('border-transparent');
+      } else {
+        navbar.classList.remove('bg-slate-950/80', 'border-slate-800');
+        navbar.classList.add('border-transparent');
+      }
+    });
+  </script>
+</body>
+</html>

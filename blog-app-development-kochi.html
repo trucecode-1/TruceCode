@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>App Development in Kochi: A Practical Guide | Trucecode</title>
+  <meta name="description" content="App development in Kochi, Kerala. A practical guide for business owners planning iOS and Android apps, costs, and launch steps." />
+  <link rel="canonical" href="https://trucecode.com/blog-app-development-kochi.html" />
+  <meta name="robots" content="index,follow" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+          colors: { slate: { 950: '#020617' } }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    :root {
+      --bg: #0b1120;
+      --panel: #0f172a;
+      --border: #1e293b;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --accent: #22d3ee;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Plus Jakarta Sans", sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; padding-top: 96px; }
+    a { color: inherit; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+    .site-header { border-bottom: 1px solid var(--border); background: rgba(11,17,32,0.95); position: sticky; top: 0; z-index: 10; }
+    .nav { display:flex; align-items:center; justify-content:space-between; padding: 16px 0; gap: 16px; flex-wrap: wrap; }
+    .logo { font-weight: 800; font-size: 20px; }
+    .logo span { color: var(--accent); }
+    .nav-links { display:flex; gap:16px; flex-wrap: wrap; align-items:center; }
+    .btn { padding: 8px 16px; border-radius: 999px; border: 1px solid rgba(34,211,238,.4); font-weight: 600; text-decoration: none; }
+
+    .breadcrumbs { font-size: 14px; color: var(--muted); margin: 24px 0 8px; }
+    .breadcrumbs a { color: #cbd5f5; }
+    h1 { font-size: clamp(30px, 4vw, 46px); line-height: 1.2; margin: 0 0 12px; }
+    h2 { margin-top: 32px; }
+    .card { background: var(--panel); border: 1px solid var(--border); padding: 18px; border-radius: 14px; }
+    .muted { color: var(--muted); }
+    .cta { background: rgba(34,211,238,.12); border: 1px solid rgba(34,211,238,.3); padding: 20px; border-radius: 16px; margin: 32px 0; }
+    footer { border-top: 1px solid var(--border); padding: 24px 0; color: var(--muted); }
+
+    #mobile-menu { transition: transform 0.3s ease-in-out; }
+    #mobile-menu.open { transform: translateX(0); }
+    #mobile-menu.closed { transform: translateX(100%); }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "App Development in Kochi: A Practical Guide",
+    "datePublished": "2026-02-11",
+    "dateModified": "2026-02-11",
+    "author": {"@type": "Organization", "name": "Trucecode"},
+    "publisher": {"@type": "Organization", "name": "Trucecode", "logo": {"@type": "ImageObject", "url": "https://trucecode.com/android-chrome-512x512.png"}},
+    "mainEntityOfPage": "https://trucecode.com/blog-app-development-kochi.html"
+  }
+  </script>
+</head>
+<body>
+  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 border-b border-transparent backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2 z-50" aria-label="Trucecode home">
+        <i data-lucide="terminal" class="w-8 h-8 text-indigo-500"></i>
+        <span class="text-xl font-bold tracking-tight text-white">
+          TRUCE<span class="text-indigo-500">CODE</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#services" class="text-sm font-medium hover:text-white transition-colors">Services</a>
+        <a href="#why-us" class="text-sm font-medium hover:text-white transition-colors">Why Us</a>
+        <a href="blog.html" class="text-sm font-medium hover:text-white transition-colors">Blog</a>
+        <a href="mailto:info@trucecode.com" class="p-2 text-indigo-300 hover:text-indigo-200 transition-colors" aria-label="Email Trucecode">
+          <i data-lucide="mail" class="w-5 h-5"></i>
+        </a>
+        <a href="#contact" class="px-6 py-2 rounded-full border border-indigo-500/30 text-sm font-medium hover:bg-indigo-500/10 transition-colors text-white">
+          Start a Project
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden z-50 text-white p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="closed fixed inset-0 z-40 bg-slate-950/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8">
+    <a href="#services" class="text-2xl font-bold text-white mobile-link">Services</a>
+    <a href="#why-us" class="text-2xl font-bold text-white mobile-link">Why Us</a>
+    <a href="blog.html" class="text-2xl font-bold text-white mobile-link">Blog</a>
+    <a href="#contact" class="text-2xl font-bold text-indigo-400 mobile-link">Start Project</a>
+  </div>
+
+  <main class="container">
+    <div class="breadcrumbs">
+      <a href="index.html">Home</a> / <a href="blog.html">Blog</a> / <span>App Development in Kochi</span>
+    </div>
+
+    <h1>App Development in Kochi: A Practical Guide</h1>
+    <p class="muted">Target keywords: app development in Kochi, mobile app development in Kerala, React Native app development.</p>
+
+    <p>Business owners in Kochi often want an app to reduce friction and improve service delivery. This guide explains what you should plan before development starts.</p>
+
+    <h2>1. Define the MVP</h2>
+    <p>List the minimum set of features that deliver value. Avoid building everything at once; ship fast and iterate.</p>
+
+    <h2>2. Pick the right tech stack</h2>
+    <p>React Native offers faster delivery for iOS and Android from one codebase. See the official documentation at <a href="https://reactnative.dev/" target="_blank" rel="noopener">React Native</a>.</p>
+
+    <h2>3. Plan for store launch</h2>
+    <p>App Store and Play Store approvals require clean metadata, screenshots, and privacy policies. Reference <a href="https://developer.android.com/distribute/google-play" target="_blank" rel="noopener">Google Play distribution guidelines</a>.</p>
+
+    <h2>4. Budget for maintenance</h2>
+    <p>Apps need updates, monitoring, and analytics. Build this into your roadmap for stability and performance.</p>
+
+    <div class="card">
+      <h3>Need a quick app roadmap?</h3>
+      <p class="muted">We help Kochi businesses scope MVPs, estimate timelines, and select the right stack.</p>
+      <p><a href="mailto:info@trucecode.com">Email info@trucecode.com</a></p>
+    </div>
+
+    <div class="cta" id="contact">
+      <h2>Related services</h2>
+      <ul>
+        <li><a href="services-kochi.html">Website development in Kochi, Kerala</a></li>
+        <li><a href="app-development.html">App Development services</a></li>
+        <li><a href="blog-erp-solutions-kochi.html">ERP solutions for SMEs in Kochi</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">© 2026 Trucecode. All rights reserved.</div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    let isMenuOpen = false;
+
+    function toggleMenu() {
+      isMenuOpen = !isMenuOpen;
+      if (isMenuOpen) {
+        mobileMenu.classList.remove('closed');
+        mobileMenu.classList.add('open');
+      } else {
+        mobileMenu.classList.remove('open');
+        mobileMenu.classList.add('closed');
+      }
+    }
+
+    menuBtn.addEventListener('click', toggleMenu);
+    mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        navbar.classList.add('bg-slate-950/80', 'border-slate-800');
+        navbar.classList.remove('border-transparent');
+      } else {
+        navbar.classList.remove('bg-slate-950/80', 'border-slate-800');
+        navbar.classList.add('border-transparent');
+      }
+    });
+  </script>
+</body>
+</html>
